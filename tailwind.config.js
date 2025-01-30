@@ -8,15 +8,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // colors: {
-      //   // Replace with your color code
-      //   clrBlack: "#111111",
-      //   clrAccent: "#ffdc26",
-      //   clrPrimary: "#fff",
-      //   clrSecondary: "#fff9f4",
-      //   clrPlaceholder: "#c4c4c4",
-      //   clrCardOrange: "#f9df8a",
-      // },
+      colors: {},
     },
   },
   plugins: [],
