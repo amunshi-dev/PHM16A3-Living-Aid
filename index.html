@@ -24,23 +24,27 @@
       rel="stylesheet"
       type="text/css"
     />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- custom style -->
-    <style type="text/tailwindcss">
-      @theme {
-        --color-black: #111;
-        --color-accent: #ffdc26;
-        --color-primary: #fff;
-        --color-secondary: #fff9f4;
-        --color-placeholder: #c4c4c4;
-        --color-card-orange: #f9df8a;
-      }
-    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clrBlack: "#111111",
+              clrAccent: "#ffdc26",
+              clrPrimary: "#fff",
+              clrSecondary: "#fff9f4",
+              clrPlaceholder: "#c4c4c4",
+              clrCardOrange: "#f9df8a",
+            },
+          },
+        },
+      };
+    </script>
     <style>
       .ff-adlam-display {
         font-family: "ADLaM Display", serif;
-        font-weight: 400;
         font-style: normal;
       }
 
@@ -51,5 +55,84 @@
       }
     </style>
   </head>
-  <body class="ff-sora"></body>
+  <body class="ff-sora text-clrBlack mx-auto">
+    <header class="sm:space-y-4">
+      <nav class="border-b-2 border-b-slate-300">
+        <div class="navbar bg-clrSecondary lg:px-36">
+          <div
+            class="navbar-start w-full lg:w-1/2 justify-between lg:justify-start flex-row-reverse lg:flex-row"
+          >
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Find a pet </a></li>
+                <li><a>Breeds</a></li>
+                <li><a>Contact us</a></li>
+              </ul>
+            </div>
+            <img src="./c1-assets/logo-header.png" alt="logo" />
+            <a class="text-xl hidden lg:inline ml-2"
+              >Browse<span class="text-clrAccent">4</span>Pets</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Find a pet </a></li>
+              <li><a>Breeds</a></li>
+              <li><a>Contact us</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end space-x-4 text-xl hidden lg:flex">
+            <i class="far fa-bell"></i>
+            <i class="fas fa-search"></i>
+            <a class="btn btn-outline border-clrAccent font-normal">Login</a>
+            <a class="bg-clrAccent btn font-normal">Register</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- hero section -->
+      <section class="relative lg:mx-36 px-4">
+        <!-- text contents -->
+        <div class="space-y-3 lg:space-x-4 lg:w-1/2 lg:pt-32">
+          <h1 class="text-3xl lg:text-6xl ff-adlam-display">
+            Pamper Your Pet, Because They Deserve the Best
+          </h1>
+          <p class="text-clrBlack text-opacity-70 lg:text-xl">
+            Discover a world of treats, toys, and essentials handpicked for your
+            furry friends. Shop now and make tails wag with joy!
+          </p>
+          <button class="btn bg-clrAccent font-normal text-base lg:text-xl">
+            Find a pet
+          </button>
+        </div>
+
+        <!-- img content -->
+        <div class="absolute -bottom-32 lg:bottom-0 lg:top-0 lg:right-0 -z-20">
+          <img src="./c1-assets/cat-big.png" alt="cat" />
+        </div>
+      </section>
+    </header>
+    <body>
+        
+    </body>
+  </body>
 </html>
